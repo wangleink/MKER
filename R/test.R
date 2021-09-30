@@ -26,6 +26,7 @@
 # xz=cbind(1, x, pmax(x-t0, 0), z)
 # 
 # rho=0.5;mu=matrix(rep(0,J));
+#sigma=matrix(NA,J,J)
 #for(i in 1:J)
 #{for(j in 1:J)
 #{sigma[i,j]=rho^abs(i-j)}}
