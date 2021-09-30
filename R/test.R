@@ -26,13 +26,9 @@
 # xz=cbind(1, x, pmax(x-t0, 0), z)
 # 
 # rho=0.5;mu=matrix(rep(0,J));
-# s_elem=NULL
-# for(j in 1:J){
-#   ss_elem=NULL;for(i in 1:j){ss_elem=c(ss_elem,rho^(i-1))}
-#   s_elem=c(ss_elem,s_elem)
-# }
-# S=matrix(0,J,J);S[lower.tri(S,diag=TRUE)]=s_elem
-# sigma=S+t(S)-diag(1,J,J)
+#for(i in 1:J)
+#{for(j in 1:J)
+#{sigma[i,j]=rho^abs(i-j)}}
 # 
 # err=mvrnorm(N,mu,sigma);err=as.vector(err)
 # y=xz %*% bet0+err
